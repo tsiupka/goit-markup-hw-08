@@ -1,0 +1,56 @@
+/*what-we-are-doing-styling*/
+.offers {
+        padding-bottom: 94px;
+}
+.offers__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        color: $color-212121;
+        margin-top: 0;
+        margin-bottom: 50px;
+        text-align: center;
+}
+
+.offers__list {
+        display: flex;
+}
+
+.offers__item {
+        position: relative;
+        z-index: -1;
+        &:not(:last-child) {
+                margin-right: 30px;
+        }
+}
+
+
+.offers__sign-container {
+        position: absolute;
+        width: 370px;
+        height: 70px;
+        text-align: center;
+        bottom: 0px;
+        background-color: rgba(47, 48, 58, 0.8);
+}
+
+.offers__image {
+        display: block;
+}
+
+.offers__sign {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        /*padding: 27px 82px 27px 83px; */
+        padding-top: 27px;
+        padding-bottom: 27px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: $color-ffffff;
+}
+
+/*what-we-are-doing-styling*/
