@@ -108,10 +108,15 @@
     display: flex;
     align-items: center;
     padding-left: 12px;
-    font-size: 14px;
+    //font-size: 14px;
+    font-size: 10px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $color-757575;
+
+    @media screen and (min-width: 480px) {
+        font-size: 14px;
+      }
 
     &::before {
         content: "";
