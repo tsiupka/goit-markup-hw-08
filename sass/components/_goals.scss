@@ -3,34 +3,93 @@
 
 .goals {
     background-color: $color-ffffff;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    //padding-top: 94px;
+    //padding-bottom: 94px;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px){
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+   
+
 }
 
 
 .goals__list {
-    display: flex;
-    flex-wrap: wrap;
+    
+    //display: flex;
+       //flex-wrap: wrap;
 
+    //margin-top: -30px;
+    //margin-left: -30px;
+
+    //mobile//
+   
+
+    //tablet//
+
+//width: 100%;
+   
+
+    @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+      
     margin-top: -30px;
     margin-left: -30px;
+
+    
+    
+    
+    }
+
+    
 }
 
 .goals__item {
-    flex-basis: calc((100% - 4 * 30px) / 4);
+    //flex-basis: calc((100% - 4 * 30px) / 4);
+    //margin-top: 30px;
+    //margin-left: 30px;
+
+    //mobila//
+    /*ниже для мобилы*/
+ 
+
+
+    //tablet//
+
     margin-top: 30px;
-    margin-left: 30px;
+    //margin-left: 30px;
+
+    @media screen and (min-width: 768px){
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin-left: 30px
+
+    }
+
+    @media screen and (min-width: 1200px){
+        flex-basis: calc((100% - 4 * 30px) / 4);
+    
+}
+
+
 }
 
 .goals__thumb {
     display: flex;
     align-items: center;
-    width: 270px;
+    //width: 270px;
     height: 120px;
     margin-bottom: 30px;
     justify-content: center;
     background-color: $color-f5f4fa;
+      
 }
+    
 
 .goals__title {
     font-size: 14px;
@@ -41,6 +100,14 @@
     color: $color-212121;
     margin-bottom: 10px;
     margin-top: 0px;
+
+/*ниже для мобилы*/
+text-align: center;
+
+@media screen and (min-width: 768px){
+    text-align: left;
+}
+
 }
 
 .goals__description {
@@ -51,6 +118,10 @@
     color: $color-757575;
     margin-top: 0px;
     margin-bottom: 0px;
+    //для мобилы//
+    text-align: left;
+
+    //width: 100%;
+
 }
 
-/*our-goals-styling*/

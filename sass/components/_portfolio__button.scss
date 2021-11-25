@@ -2,8 +2,10 @@
 /*hided-h2*/
 
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    //padding-top: 94px;
+    padding-top: 60px;
+    //padding-bottom: 94px;
+    padding-bottom: 60px;
 }
 
 .portfolio__button {
@@ -21,8 +23,8 @@
     border-radius: 4px;
     padding-right: 22px;
     padding-left: 22px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     cursor: pointer;
     transition: box-shadow $transition-duration
                     $transition-timing-function,
@@ -43,10 +45,39 @@
 
 .portfolio__buttons-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    //justify-content: center;
+    //margin-bottom: 50px;
+    flex-wrap:wrap;
+
+    @media screen and (min-width: 768px){
+        justify-content: center;
+        margin-bottom: 30px
+
+    }
+
+
+    @media screen and (min-width: 1200px){
+        
+        margin-bottom: 50px
+
+    }
 }
 
-.portfolio__buttons-list-item:not(:last-child) {
-    margin-right: 8px;
-}
+.portfolio__buttons-list-item{
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+        margin-right: 8px;}
+
+        @media screen and (min-width: 769px){
+           
+            margin-bottom: 0px;
+    
+        }
+        
+        //mobil//
+        //margin-bottom: 15px;
+    }
+
+
+

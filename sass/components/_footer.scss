@@ -6,8 +6,9 @@
 
 .footer__logo {
     display: block;
+    //text-align: center;
     margin-bottom: 20px;
-    text-align: left;
+    //text-align: left;
     color: $color-ffffff;
 }
 
@@ -19,13 +20,37 @@
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    //display: flex;
+    //align-items: baseline;
+
+    @media screen and (min-width: 1200px){
+       display: flex;
+       align-items: baseline;
+       
+        }
+    
+    
 }
 
 .footer__contacts {
     display: block;
-    margin-right: 70px;
+    //margin-right: 70px;
+    text-align: center;
+
+    //mobila
+
+
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px){
+        margin-right: 70px;
+        margin-bottom: 0px;
+        text-align: left;
+       
+         }
+    
+    
+    
 }
 
 .footer__mail-link,
@@ -49,6 +74,13 @@
     font-style: normal;
     color: $color-ffffff;
     display: block;
+
+
+    //mobila
+
+    
+   
+    
 }
 
 .footer__mail-link:hover{
@@ -69,7 +101,15 @@
 
 .footer__direction,
 .footer__mail-link {
+    margin-bottom: 8px;
+
+
+    //mobil
+    @media screen and (min-width: 1200px){
+
     margin-bottom: 9px;
+    }
+
 }
 
 .footer__title {
@@ -78,11 +118,19 @@
     margin-top: 0px;
     text-transform: uppercase;
     color: $color-ffffff;
+
+    //mobila//
+    display: block;
+    text-align: center;
+    
 }
 
 .footer__socials-list {
     display: flex;
+    justify-content: center;
 }
+
+
 
 .footer__socials-item:not(:last-child) {
     margin-right: 10px;
@@ -114,7 +162,12 @@
 
 /*footer-signup-section*/
 .footer__signup {
-    margin-left: 93px;
+    //margin-left: 93px;
+
+//mobila
+
+
+    
 }
 
 .footer__title {
@@ -125,18 +178,65 @@
     text-transform: uppercase;
     color: $color-ffffff;
     margin-bottom: 20px;
+
+
+    //mobila
+    
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+        text-align: left;
+    
+
+    }
+
 }
 
 .footer__form {
-    display: flex;
-    align-items: center;
+    //display: flex;
+
+    //mobla
+
+   // @media screen and (max-width: 1200px){
+                     
+           
+   // text-align: center;}
+
+
+
+    @media screen and (max-width: 1200px){
+                        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    
+
+    }
+
+        @media screen and (min-width: 1200px){
+                        
+            display: flex;
+            flex-direction: row;
+            
+           
+        }
+       
 }
+  
+    
 
 .footer__form-input {
-    margin-right: 12px;
-    width: 358px;
+    //margin-right: 12px;
+    //width: 358px;
     height: 50px;
     padding: 16px 15px;
+
+
+    width: 100%;
+    margin-bottom: 20px;
+    
+    
 
     color: $color-rgba-255-255-255-03;
     border-radius: 4px;
@@ -155,6 +255,28 @@
            &::placeholder {
                 color: $color-rgba-255-255-255-06;
             }
+
+            //mobila
+            
+           // @media screen and (max-width: 768px){
+               
+
+                @media screen and (min-width: 768px){
+                    width: 450px;
+                    
+                   
+                    }
+
+                    @media screen and (min-width: 1200px){
+                        margin-bottom: 0px;
+                        width: 358px;
+                        margin-right: 12px
+                        }
+                
+
+            //tablet
+
+           
 }
 
 
@@ -163,6 +285,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 28px;
+    width: 200px;
+    height: 50px;
 
     color: $color-ffffff;
     border-radius: 4px;
@@ -180,6 +304,36 @@
     margin-left: 10px;
 }
 
+
+.footer__social-networks{
+
+    margin-bottom: 60px;
+
+
+  
+
+    @media screen and (min-width: 1200px){
+              
+        margin-right: 93px;
+        margin-bottom: 0px;
+        }
+    
+}
+
+
+@media screen and (min-width: 768px){
+.footer-align{
+    display: flex;
+    justify-content: space-around;
+}
+}
+
+.footer-align{
+    @media screen and (min-width: 1200px){
+        align-items: baseline;
+    }
+
+}
 /*footer-signup-section*/
 
 /*footer-section-styling*/

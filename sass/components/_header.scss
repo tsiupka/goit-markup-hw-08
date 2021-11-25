@@ -2,12 +2,20 @@
 
 .header {
     border-bottom: 1px solid #ececec;
+    position: relative;
+    
+    
 
 
  &__container {
-    padding: 0 15px;
+    //padding: 0 15px;
     display: flex;
     justify-content: space-between;
+    
+    //mobila
+    
+    
+    
 }
 }
 
@@ -15,7 +23,20 @@
 
 .header__logo {
     display: block;
-    margin-right: 93px;
+    //margin-right: 93px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @media screen and (min-width: 768px){
+        margin-right: 88px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        }
+    
+        @media screen and (min-width: 1200px){
+            margin-right: 93px
+            }
+
 
     &-part--web {
         color: $color-2196f3;
@@ -30,12 +51,23 @@
 /*section-of-navigation-styles*/
 
 .header__nav {
+    
     display: flex;
     align-items: center;
+    
+    
 }
 .header__site-nav {
+   //display: flex;
+   //align-items: center;
+    display: none;
+
+    @media screen and (min-width: 768px){
     display: flex;
     align-items: center;
+    //margin-right: 84px;
+    }
+
 }
 
 .header__site-nav-link {
@@ -56,23 +88,66 @@
 }
 
 .header__contacts-item-link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    //padding-top: 32px;
+   //padding-bottom: 32px;
     display: block;
-}
+   
+    } 
+
 
 .header__site-nav-item {
     margin-right: 50px;
-&:last-child {margin-right: 0px;
+
+ &:last-child {margin-right: 0px;
 }
+
+
 }
 
 .header__contacts-item {
-    margin-right: 50px;
-    &:last-child {
-        margin-right: 0px;
+
+    //margin-bottom: 10px;
+
+&:not(:last-child){
+    margin-bottom: 10px;
 }
+
+//&:not(:last-child)
+//{
+    //margin-bottom: 0px;
+//}
+    
+
+    @media screen and (min-width: 1200px){
+        
+        
+        margin-bottom: 0px;
+
+        &:last-child{     
+    margin-right: 0px;}
+
+    &:not(:last-child){
+        margin-bottom: 0px;
+        margin-right: 30px;
+    }
+   
 }
+
+
+
+
+
+
+
+
+    
+
+
+
+       
+
+}
+
 
 
 /*section-of-navigation-styles*/
@@ -80,13 +155,30 @@
 /*section-of-navigation-styles*/
 
 .header__contacts-nav {
+    display: none;
+
+    @media screen and (min-width: 768px){
     display: flex;
-    align-items: center;
+    //align-items: center;
+    flex-direction: column;
+    justify-content: center;}
+    
+
+    @media screen and (min-width: 1200px){
+   
+        flex-direction:row;
+        align-items: center;
+    
+}
 }
 
 .header__contacts-item-link {
+
+   
+    
+  
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $color-757575;
@@ -97,6 +189,10 @@
 
             &:hover {
                 color: $color-2196f3;
+            }
+
+            @media screen and (min-width: 1200px){
+                font-size: 14px;
             }
   }
 
@@ -121,3 +217,131 @@
     }
 }
 
+
+
+//mobile-menu//
+.menu-button{
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+      }
+
+      &:hover .menu-button__icon,
+      &:focus .menu-button__icon
+      {
+    fill: $color-2196f3;
+  }
+
+@media screen and (min-width: 768px){
+    display: none;
+}
+
+}
+
+.mobile-menu__icon {
+   
+    transition: fill $transition-duration $transition-timing-function;
+  } 
+    
+
+
+
+.menu-button .icon-burger-x { 
+    display: none;
+    width:19px;
+    height:19px;
+   
+    
+
+}
+
+
+.menu-button.is-open .icon-burger-x { 
+    display: block;
+   
+}
+
+
+.menu-button.is-open .icon-burger { 
+    display: none;
+}
+
+.menu-container {
+    padding-top: 48px;
+    padding-left: 40px;
+    z-index: 5;
+    display: none;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: $color-ffffff;
+    
+             
+        text-align: center;
+        font-size: 20px;
+        height: 796px;
+        margin: 0;
+    
+        &.is-open{
+            display: block;
+            width: 100%;
+
+            @media screen and (min-width: 768px){
+                display: none;
+            
+            }
+            
+           
+        }
+
+        
+
+    }
+
+    .mobile-nav__site-list, .mobile-contacts{
+        text-align: left;
+    }
+
+    .mobile-nav{
+        margin-bottom: 302px;
+
+        &__site-link{
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 1.175;
+            letter-spacing: 0.02em;
+            color: $color-212121;
+            
+
+
+        }
+
+        &__site-item:not(:last-child){
+            margin-bottom: 32px;  
+
+        }
+
+        &__site-link{
+            transition: color $transition-duration $transition-timing-function;
+            
+        }
+    }
+
+    
+    .mobile-nav__site-link:hover, .mobile-nav__site-link:focus{
+    
+             
+              color: $color-2196f3;
+            
+        }
+
+        .mobile-nav__site-link-now-on{
+            color: $color-2196f3;
+        }
