@@ -4,9 +4,13 @@
     margin-bottom: 30px;
     color: $color-212121;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 12px;
     line-height: 1.15;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: 480px) {
+        font-size: 20px;
+      }
 }
 
 .modal-form {
@@ -80,6 +84,7 @@
     padding-right: 16px;
     padding-bottom: 12px;
     padding-left: 16px;*/
+    margin-bottom: 20px;
     resize: none;
     font-size: 14px;
     line-height: 1.14;
@@ -107,12 +112,18 @@
 .form__agreement-text {
     display: flex;
     align-items: center;
-    padding-left: 12px;
+    //justify-content: space-between;
+    //padding-left: 12px;
     //font-size: 14px;
-    font-size: 10px;
+    
+    font-size: 8px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $color-757575;
+    
+    @media screen and (min-width: 361px) and(max-width: 479px) {
+        font-size: 10px;
+      }
 
     @media screen and (min-width: 480px) {
         font-size: 14px;
@@ -135,6 +146,7 @@
 .form__agreement-link {
     text-decoration-line: underline;
     color: $color-2196f3;
+    
 }
 
 .form__agreement-checkbox {

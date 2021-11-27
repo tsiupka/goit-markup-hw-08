@@ -49,16 +49,22 @@
             
         </ul>
 
-        <button type="button" class="menu-button is-open"
-        aria-expanded="false" aria-controls="menu-container"
-        data-menu-button>
+        <button type="button" class="menu-toggle js-open-menu"
+        aria-expanded="false" aria-controls="mobile-menu">
           <svg width="24" height="16" aria-label="переключатель мобильного меню">
-            <use class="menu-button__icon icon-burger-x" href="./images/sprite.svg#burger-x"></use>
-            <use class="menu-button__icon icon-burger" href="./images/sprite.svg#burger"></use>
+                        <use class="menu-toggle__icon icon-burger" href="./images/sprite.svg#burger"></use>
           </svg>
         </button>
 
-        <div class="menu-container is-open" id="menu-container" data-menu>
+        <div class="menu-container js-menu-container is-open" id="mobile-menu">
+          <button type="button" class=" menu-toggle js-close-menu"
+        aria-expanded="false" aria-controls="menu-container"
+        data-menu-button>
+          <svg width="24" height="16" aria-label="переключатель мобильного меню">
+            <use class="menu-toggle__icon icon-burger-x" href="./images/sprite.svg#burger-x"></use>
+            
+          </svg>
+        </button>
           <nav class="mobile-nav">
             <ul class="mobile-nav__site-list">
         

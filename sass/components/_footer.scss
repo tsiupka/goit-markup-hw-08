@@ -17,11 +17,22 @@
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: $color-2f303a;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 70px 0 50px;
+      }
+
 }
 
 .footer-container {
     //display: flex;
     //align-items: baseline;
+
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 0 74px 0 60px;
+      }
+  
 
     @media screen and (min-width: 1200px){
        display: flex;
